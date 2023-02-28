@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  nodejs:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:3000"
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
